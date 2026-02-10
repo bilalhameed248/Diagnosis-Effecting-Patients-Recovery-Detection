@@ -1,16 +1,16 @@
 # Clinical Text Classification with Bio_ClinicalBERT
 
-A machine learning project for automated classification of clinical assessment text to identify whether "skilled care" justification is present in initial evaluations.
+A deep learning based project for automated classification of clinical assessment text to identify whether "Diagnosis affecting recovery" is present in initial evaluations.
 
 ## 📋 Overview
 
-This project implements a fine-tuned BERT-based model (Bio_ClinicalBERT) to analyze clinical assessment text and determine if the documentation adequately explains why skilled care is needed. The model processes clinical impressions and evaluations to support healthcare documentation quality assurance.
+This project implements a fine-tuned BERT-based model (Bio_ClinicalBERT) to analyze clinical assessment text and determine if the documentation contains evidence of diagnosis affecting patient recovery. The model processes clinical impressions and evaluations to support healthcare documentation quality assurance by identifying whether recovery-impacting diagnoses are properly documented.
 
 ## 🎯 Key Features
 
 - **Pre-trained Clinical Model**: Utilizes `emilyalsentzer/Bio_ClinicalBERT` optimized for clinical text
 - **Text Preprocessing**: Advanced NLP preprocessing with lemmatization and stopword removal
-- **Binary Classification**: Identifies presence/absence of skilled care justification
+- **Binary Classification**: Identifies presence/absence of diagnosis affecting recovery
 - **High Accuracy Threshold**: 95% confidence threshold for predictions
 - **Sentence-Level Analysis**: Tokenizes and analyzes text at sentence granularity
 - **GPU Acceleration**: CUDA-enabled training and inference
@@ -96,7 +96,7 @@ Patient evaluation text here...
 inference_why_skill_care(content)
 ```
 
-**Output**: Returns whether skilled care justification is found with 95%+ confidence.
+**Output**: Returns whether diagnosis affecting recovery is found with 95%+ confidence.
 
 ## 📊 Model Performance
 
@@ -141,7 +141,7 @@ info = nvmlDeviceGetMemoryInfo(h)
 
 ## 📈 Results
 
-The model evaluates clinical documentation to determine if it contains adequate justification for skilled care services. Key metrics tracked:
+The model evaluates clinical documentation to determine if it contains evidence of diagnosis affecting patient recovery. Key metrics tracked:
 - Training/validation accuracy
 - Confusion matrix
 - Per-epoch performance
@@ -151,3 +151,4 @@ The model evaluates clinical documentation to determine if it contains adequate 
 For questions or support, please open an issue in the repository.
 
 ---
+````
